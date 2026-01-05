@@ -3,6 +3,7 @@
 **AI-Powered Mathematical Graph Drawing Tool**
 
 수학 도형과 그래프를 AI 에이전트와 함께 작도하는 웹 기반 도구
+https://alphacanvas.kr/
 
 [![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
