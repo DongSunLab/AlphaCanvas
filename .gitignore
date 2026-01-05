@@ -1,0 +1,50 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Environment variables (API KEYS!)
+.env
+.env.local
+.env.*.local
+*.env
+
+# Build outputs
+frontend/dist/
+build/
+*.egg-info/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
+
+# Test coverage
+coverage/
+.coverage
+htmlcov/
+
+# Misc
+*.sqlite
+*.db
+.cache/
+tmp/
+temp/
+
+# SSL Certificates & Private Keys (NEVER commit these!)
+*.pem
+*.key
+*.crt
+*.cer
+
+# Local notes (contains passwords/secrets!)
+실행방법.txt
+우분투 배포방법.txt
+

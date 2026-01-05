@@ -1,0 +1,116 @@
+#root {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Remove math-field default outline and selection highlight */
+math-field {
+  outline: none !important;
+  border: none !important;
+}
+
+math-field:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Hide selection background in math-field */
+math-field::part(content) {
+  --selection-background-color: transparent !important;
+}
+
+/* Hide virtual keyboard button and settings */
+math-field::part(virtual-keyboard-toggle),
+.ML__virtual-keyboard-toggle,
+.ML__keyboard-toggle {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Hide settings button */
+math-field::part(menu-toggle),
+.ML__menu-toggle {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Hide all keyboard UI */
+.ML__keyboard,
+.ML__virtual-keyboard,
+math-field::part(keyboard) {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Toast animation */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  10% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  90% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+}
+
+/* Canvas pop-in animation on page load */
+@keyframes canvasPopIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.canvas-container {
+  animation: canvasPopIn 0.4s ease-out forwards;
+}

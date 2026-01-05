@@ -1,0 +1,22 @@
+# AlphaStudio - Backend Dependencies
+
+# Core Framework
+fastapi>=0.109.0,<0.120.0
+uvicorn[standard]>=0.27.0,<0.32.0
+python-dotenv>=1.0.0,<2.0.0
+pydantic>=2.5.0,<3.0.0
+websockets>=12.0,<14.0
+
+# AI & LLM
+openai>=1.40.0,<2.0.0
+openai-agents  # OpenAI Agents SDK
+google-genai>=1.56.0,<2.0.0  # Gemini API SDK
+anthropic>=0.52.0,<1.0.0  # Claude API SDK
+
+# Utilities
+json-repair>=0.7.0,<1.0.0
+httpx>=0.24.0,<0.29.0
+python-multipart>=0.0.6  # FastAPI 파일 업로드 지원
+
+# 프로덕션 배포용
+gunicorn>=21.2.0,<23.0.0

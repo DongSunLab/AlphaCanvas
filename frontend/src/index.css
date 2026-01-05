@@ -1,0 +1,196 @@
+@font-face {
+  font-family: 'Apple SD Gothic Neo';
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/fonts-archive/AppleSDGothicNeo/AppleSDGothicNeo-SemiBold.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/gh/fonts-archive/AppleSDGothicNeo/AppleSDGothicNeo-SemiBold.ttf') format('truetype');
+}
+
+/* Roman labels (rmO, rmABC, etc.) are now rendered as SVG paths using opentype.js */
+
+:root {
+  font-family: 'Apple SD Gothic Neo', system-ui, -apple-system, 'Segoe UI', Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 600;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  min-width: 320px;
+}
+
+/* -------------------------------------------------------------------------- */
+/* AgentPanel: reasoning scrollbars (subtle, modern)                           */
+/* -------------------------------------------------------------------------- */
+.agent-reasoning-scroll {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: rgba(255, 255, 255, 0.28) transparent; /* thumb track */
+}
+.agent-reasoning-scroll::-webkit-scrollbar {
+  width: 10px;
+}
+.agent-reasoning-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.agent-reasoning-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  border: 3px solid transparent; /* makes it look thinner */
+  background-clip: content-box;
+}
+.agent-reasoning-scroll:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.35);
+}
+
+/* 메이솔 페이지용 스크롤 허용 */
+body.maysol-page {
+  height: auto;
+  overflow: auto;
+  background-color: #F5F5F7;
+}
+
+body.maysol-page #root {
+  height: auto;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: none;
+}
+
+/* Custom tooltip styles - modern gray */
+button[data-tooltip] {
+  position: relative !important;
+}
+
+button[data-tooltip]::before {
+  content: attr(data-tooltip) !important;
+  position: absolute !important;
+  bottom: calc(100% + 8px) !important;
+  left: 50% !important;
+  transform: translateX(-50%) translateY(-4px) !important;
+  padding: 6px 12px !important;
+  background: rgb(240, 240, 240) !important;
+  color: rgba(40, 40, 40, 0.95) !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  border-radius: 6px !important;
+  white-space: nowrap !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
+  transition: opacity 0.2s ease, transform 0.2s ease !important;
+  z-index: 10000 !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15) !important;
+  border: none !important;
+}
+
+button[data-tooltip]::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: calc(100% + 2px) !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  border: 6px solid transparent !important;
+  border-top-color: rgb(240, 240, 240) !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
+  transition: opacity 0.2s ease !important;
+  z-index: 10000 !important;
+}
+
+button[data-tooltip]:hover::before {
+  opacity: 1 !important;
+  transform: translateX(-50%) translateY(0) !important;
+}
+
+button[data-tooltip]:hover::after {
+  opacity: 1 !important;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* Global Modern Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(128, 128, 128, 0.4);
+  border-radius: 4px;
+  border: 2px solid transparent; /* Creates padding effect */
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(128, 128, 128, 0.6);
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Firefox support */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(128, 128, 128, 0.4) transparent;
+}
+
